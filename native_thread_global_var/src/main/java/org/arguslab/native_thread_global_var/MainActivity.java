@@ -13,7 +13,7 @@ import android.telephony.TelephonyManager;
 public class MainActivity extends Activity {
 
     static {
-        System.loadLibrary("leak"); // "libleak.so"
+        System.loadLibrary("threadglobal"); 
     }
 
     public static native void send(String data);
