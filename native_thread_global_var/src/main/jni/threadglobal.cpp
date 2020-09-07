@@ -1,6 +1,7 @@
 #include <android/log.h>
 #include <jni.h>
 #include <stddef.h>
+#include <pthread.h>
 
 
 #define LOG_TAG    "leak"
