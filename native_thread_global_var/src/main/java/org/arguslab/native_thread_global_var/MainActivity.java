@@ -6,10 +6,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 
-/**
- * @description The value v of a source is sent to native lib via jni and leaked by global variables via threads.
- * @challenges The analysis must be able to track data flow in both java and native layers to capture the data leakage considering native threads.
- */
+
 public class MainActivity extends Activity {
 
     static {
