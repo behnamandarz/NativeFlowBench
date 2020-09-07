@@ -1,4 +1,4 @@
-package org.arguslab.native_global_var;
+package org.arguslab.native_thread_global_var;
 
 import android.Manifest;
 import android.app.Activity;
