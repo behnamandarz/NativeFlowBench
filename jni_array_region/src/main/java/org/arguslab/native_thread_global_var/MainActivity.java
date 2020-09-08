@@ -1,4 +1,4 @@
-package org.arguslab.native_leak_array;
+package org.arguslab.jni_array_region;
 
 import android.Manifest;
 import android.app.Activity;
@@ -10,7 +10,7 @@ import android.telephony.TelephonyManager;
 public class MainActivity extends Activity {
 
     static {
-        System.loadLibrary("jni_region");
+        System.loadLibrary("jniregion");
     }
 
     public static native void send(String[] data);
