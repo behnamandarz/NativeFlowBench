@@ -1,4 +1,4 @@
-package org.arguslab.native_jni_array_region;
+package org.arguslab.native_leak_array;
 
 import android.Manifest;
 import android.app.Activity;
@@ -10,10 +10,10 @@ import android.telephony.TelephonyManager;
 public class MainActivity extends Activity {
 
     static {
-        System.loadLibrary("jniregion"); 
+        System.loadLibrary("jni_region");
     }
 
-    public static native void send(String data);
+    public static native void send(String[] data);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,9 @@ public class MainActivity extends Activity {
             return;
         }
         String imei = tel.getDeviceId(); // source
-        send(imei);
+        String[] arr = new String[10];
+        arr[1] = imei;
+        send(arr);
     }
 
     @Override
