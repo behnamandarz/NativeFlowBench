@@ -2,6 +2,7 @@
 #include <jni.h>
 #include <stddef.h>
 #include <pthread.h>
+#include <semaphore.h>
 
 
 #define LOG_TAG    "leak"
